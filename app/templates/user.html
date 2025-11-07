@@ -1,1 +1,67 @@
-<h1>USER</h1>
+{% load static %}
+
+<body style="font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9;">
+
+    <!-- Page Title -->
+    <h1 style="
+        text-align: center;
+        color: #0078D7;
+        font-size: 32px;
+        margin-top: 40px;
+        letter-spacing: 1px;
+    ">
+        USER
+    </h1>
+
+    <!-- Image Centered -->
+    <div style="text-align: center; margin-top: 40px;">
+        <img src="{% static 'images/COLL.png' %}" alt="picture" width="800" 
+             style="border-radius: 10px; box-shadow: 2px 2px 12px rgba(0,0,0,0.2);">
+    </div>
+
+    <!-- Buttons Section -->
+    <div style="text-align: center; margin-top: 60px;">
+
+        <!-- STAFF Button -->
+        <a href="{% url 'staff' %}" 
+           style="
+              display: inline-block;
+              width: 160px;
+              margin: 20px;
+              background: linear-gradient(90deg, #0078D7, #005cbf);
+              color: white;
+              text-decoration: none;
+              padding: 12px 0;
+              border-radius: 8px;
+              font-size: 18px;
+              text-align: center;
+              font-weight: 600;
+              letter-spacing: 1px;
+              box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+           ">
+           STAFF
+        </a>
+
+        <!-- HEAD Button -->
+        <a href="{% url 'head' %}" 
+           style="
+              display: inline-block;
+              width: 160px;
+              margin: 20px;
+              background: linear-gradient(90deg, #28a745, #1e7e34);
+              color: white;
+              text-decoration: none;
+              padding: 12px 0;
+              border-radius: 8px;
+              font-size: 18px;
+              text-align: center;
+              font-weight: 600;
+              letter-spacing: 1px;
+              box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+           ">
+           HEAD
+        </a>
+
+    </div>
+
+</body>
