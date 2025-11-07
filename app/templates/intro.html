@@ -1,0 +1,54 @@
+{% load static %}
+
+<body style="font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #fdfdfd;">
+
+    <!-- Header Section -->
+    <div style="text-align: center; margin-top: 40px; line-height: 1.4;">
+        <h1 style="color: red; font-size: 34px; margin: 0;">LMK COLLEGE OF TECHNOLOGY</h1>
+        <h3 style="color: red; font-size: 22px; margin: 6px 0;">(AUTONOMOUS)</h3>
+        <h4 style="color: red; font-size: 18px; margin: 6px 0;">VENNANDUR, RASIPURAM(TK), NAMAKKAL(DT)-637505</h4>
+    </div>
+
+    <!-- Title Section -->
+    <h1 style="color: green; text-align: center; margin-top: 50px; font-size: 28px;">
+        STUDENT MANAGEMENT SYSTEM
+    </h1>
+
+    <!-- Logo Corners -->
+    <img src="{% static 'images/logo.png' %}" alt="Logo" width="110" 
+         style="position: absolute; top: 20px; left: 20px;">
+    <img src="{% static 'images/logo.png' %}" alt="Logo" width="110" 
+         style="position: absolute; top: 20px; right: 20px;">
+    <img src="{% static 'images/logo.png' %}" alt="Logo" width="110" 
+         style="position: absolute; bottom: 20px; left: 20px;">
+    <img src="{% static 'images/logo.png' %}" alt="Logo" width="110" 
+         style="position: absolute; bottom: 20px; right: 20px;">
+
+    <!-- Center Images -->
+    <div style="text-align: center; margin-top: 60px;">
+        <img src="{% static 'images/LAP.png' %}" alt="Laptop" width="170" 
+             style="margin-right: 40px;">
+        <img src="{% static 'images/R.png' %}" alt="Right Logo" width="170">
+    </div>
+
+    <!-- GO Button (Without onmouseover/out) -->
+    <a href="{% url 'user' %}" 
+       style="
+          display: block;
+          width: 150px;
+          margin: 70px auto;
+          background: linear-gradient(90deg, #0078D7, #005cbf);
+          color: white;
+          text-decoration: none;
+          padding: 12px 0;
+          border-radius: 8px;
+          font-size: 18px;
+          text-align: center;
+          font-weight: 600;
+          letter-spacing: 1px;
+          box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+       ">
+       GO
+    </a>
+
+</body>
