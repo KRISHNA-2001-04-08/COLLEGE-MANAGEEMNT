@@ -9,11 +9,11 @@
 
   <form method="post" action="{% url 'login' %}"
         style="
-          width: 350px;
-          padding: 30px;
+          width: 380px;
+          padding: 35px;
           background: white;
           border-radius: 15px;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
           text-align: center;
         ">
         
@@ -25,10 +25,10 @@
             font-size: 24px;
             letter-spacing: 1px;
           ">
-          Login
+          Create Account
       </h2>
 
-      <input type="text" name="username" placeholder="NAME" 
+      <input type="text" name="username" placeholder="NAME"
              value="{{ request.POST.username }}" required
              style="
                width: 85%;
@@ -40,7 +40,7 @@
                outline: none;
              ">
 
-      <input type="text" name="department" placeholder="DEPT" required
+      <input type="text" name="department" placeholder="DEPARTMENT" required
              style="
                width: 85%;
                padding: 10px;
@@ -73,12 +73,23 @@
                outline: none;
              ">
 
+      <input type="password" name="re-password" placeholder="Re-Enter Password" required
+             style="
+               width: 85%;
+               padding: 10px;
+               margin: 8px 0;
+               border: 1px solid #ccc;
+               border-radius: 8px;
+               font-size: 15px;
+               outline: none;
+             ">
+
       <button type="submit"
               style="
                 width: 90%;
                 padding: 10px;
                 margin-top: 15px;
-                background: linear-gradient(90deg, #0078D7, #005cbf);
+                background: linear-gradient(90deg, #28a745, #1e7e34);
                 color: white;
                 border: none;
                 border-radius: 8px;
@@ -87,26 +98,23 @@
                 cursor: pointer;
                 transition: 0.3s;
               ">
-          Login
+          CREATE
       </button>
 
-      <a href="{% url 'signup' %}" 
+      <a href="{% url 'login' %}"
          style="
             display: inline-block;
             width: 90%;
             margin-top: 15px;
-            background: linear-gradient(90deg, #28a745, #1e7e34);
-            color: white;
+            background: transparent;
+            color: #0078D7;
             text-decoration: none;
-            padding: 10px 0;
-            border-radius: 8px;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: bold;
-            letter-spacing: 1px;
-            box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+            letter-spacing: 0.5px;
             transition: 0.3s;
          ">
-         Signup
+         Already have an account? Login
       </a>
 
   </form>

@@ -10,10 +10,13 @@ def intro(request):
     return render(request,'intro.html')
 def user(request):
     return render(request,"user.html")
-def staff(request):
-    return render(request,"staff.html")
+
 def head(request):
     return render(request,"head.html")
 
 def login(request):
     return render(request,"login.html")
+def signup(request):
+    return render(request,"signup.html")
+def create(request):
+    return render(request,"create.html")
