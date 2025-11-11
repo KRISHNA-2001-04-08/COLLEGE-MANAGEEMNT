@@ -11,8 +11,7 @@ def intro(request):
 def user(request):
     return render(request,"user.html")
 
-def head(request):
-    return render(request,"head.html")
+
 
 def login(request):
     return render(request,"login.html")
