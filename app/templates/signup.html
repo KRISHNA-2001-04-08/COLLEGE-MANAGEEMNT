@@ -1,121 +1,24 @@
-<body style="
-      background: #E6F0FF;
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    ">
+<body>
 
-  <form method="post" action="{% url 'login' %}"
-        style="
-          width: 380px;
-          padding: 35px;
-          background: white;
-          border-radius: 15px;
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-          text-align: center;
-        ">
+  <form method="post" action="{% url 'login' %}">
         
       {% csrf_token %}
       
-      <h2 style="
-            color: #0078D7;
-            margin-bottom: 25px;
-            font-size: 24px;
-            letter-spacing: 1px;
-          ">
-          Create Account
-      </h2>
+      <h2>Create Account</h2>
 
-      <input type="text" name="username" placeholder="NAME"
-             value="{{ request.POST.username }}" required
-             style="
-               width: 85%;
-               padding: 10px;
-               margin: 8px 0;
-               border: 1px solid #ccc;
-               border-radius: 8px;
-               font-size: 15px;
-               outline: none;
-             ">
+      <input type="text" name="username" placeholder="NAME" value="{{ request.POST.username }}" required>
 
-      <input type="text" name="department" placeholder="DEPARTMENT" required
-             style="
-               width: 85%;
-               padding: 10px;
-               margin: 8px 0;
-               border: 1px solid #ccc;
-               border-radius: 8px;
-               font-size: 15px;
-               outline: none;
-             ">
+      <input type="text" name="department" placeholder="DEPARTMENT" required>
 
-      <input type="text" name="year" placeholder="YEAR" required
-             style="
-               width: 85%;
-               padding: 10px;
-               margin: 8px 0;
-               border: 1px solid #ccc;
-               border-radius: 8px;
-               font-size: 15px;
-               outline: none;
-             ">
+      <input type="text" name="year" placeholder="YEAR" required>
 
-      <input type="password" name="password" placeholder="Password" required
-             style="
-               width: 85%;
-               padding: 10px;
-               margin: 8px 0;
-               border: 1px solid #ccc;
-               border-radius: 8px;
-               font-size: 15px;
-               outline: none;
-             ">
+      <input type="password" name="password" placeholder="Password" required>
 
-      <input type="password" name="re-password" placeholder="Re-Enter Password" required
-             style="
-               width: 85%;
-               padding: 10px;
-               margin: 8px 0;
-               border: 1px solid #ccc;
-               border-radius: 8px;
-               font-size: 15px;
-               outline: none;
-             ">
+      <input type="password" name="re-password" placeholder="Re-Enter Password" required>
 
-      <button type="submit"
-              style="
-                width: 90%;
-                padding: 10px;
-                margin-top: 15px;
-                background: linear-gradient(90deg, #28a745, #1e7e34);
-                color: white;
-                border: none;
-                border-radius: 8px;
-                font-weight: bold;
-                font-size: 16px;
-                cursor: pointer;
-                transition: 0.3s;
-              ">
-          CREATE
-      </button>
+      <button type="submit">CREATE</button>
 
-      <a href="{% url 'login' %}"
-         style="
-            display: inline-block;
-            width: 90%;
-            margin-top: 15px;
-            background: transparent;
-            color: #0078D7;
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: bold;
-            letter-spacing: 0.5px;
-            transition: 0.3s;
-         ">
-         Already have an account? Login
-      </a>
+      <a href="{% url 'login' %}">Already have an account? Login</a>
 
   </form>
 

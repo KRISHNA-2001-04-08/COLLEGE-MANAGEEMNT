@@ -1,112 +1,23 @@
-<form method="post" action="{% url 'login' %}"
-      style="
-        max-width: 350px;
-        margin: 100px auto;
-        padding: 30px;
-        background: linear-gradient(135deg, #0078D7, #00A6FF);
-        border-radius: 15px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        text-align: center;
-        font-family: Arial, sans-serif;
-      ">
-
+<form method="post" action="{% url 'user' %}">
   {% csrf_token %}
 
-  <h2 style="
-        color: white;
-        margin-bottom: 25px;
-        letter-spacing: 1px;
-        font-weight: bold;
-      ">
-    Login
-  </h2>
+  <h2>Login</h2>
 
   <!-- Username -->
-  <input type="text" name="username" placeholder="NAME"
-         value="{{ request.POST.username }}" required
-         style="
-           width: 85%;
-           padding: 10px;
-           margin: 8px 0;
-           border: none;
-           border-radius: 8px;
-           font-size: 15px;
-           outline: none;
-         ">
+  <input type="text" name="username" placeholder="NAME" value="{{ request.POST.username }}" required>
 
   <!-- Department -->
-  <input type="text" name="department" placeholder="DEPT"
-         value="{{ request.POST.department }}" required
-         style="
-           width: 85%;
-           padding: 10px;
-           margin: 8px 0;
-           border: none;
-           border-radius: 8px;
-           font-size: 15px;
-           outline: none;
-         ">
+  <input type="text" name="department" placeholder="DEPT" value="{{ request.POST.department }}" required>
 
   <!-- Year -->
-  <input type="text" name="year" placeholder="YEAR"
-         value="{{ request.POST.year }}" required
-         style="
-           width: 85%;
-           padding: 10px;
-           margin: 8px 0;
-           border: none;
-           border-radius: 8px;
-           font-size: 15px;
-           outline: none;
-         ">
+  <input type="text" name="year" placeholder="YEAR" value="{{ request.POST.year }}" required>
 
   <!-- Password -->
-  <input type="password" name="password" placeholder="Password" required
-         style="
-           width: 85%;
-           padding: 10px;
-           margin: 8px 0;
-           border: none;
-           border-radius: 8px;
-           font-size: 15px;
-           outline: none;
-         ">
+  <input type="password" name="password" placeholder="Password" required>
 
   <!-- Login Link Styled as Button -->
-  <a href="{% url 'login' %}"
-     style="
-        display: inline-block;
-        width: 90%;
-        margin-top: 15px;
-        background: white;
-        color: #0078D7;
-        text-decoration: none;
-        padding: 10px 0;
-        border-radius: 8px;
-        font-weight: bold;
-        font-size: 16px;
-        letter-spacing: 1px;
-     ">
-     Login
-  </a>
+  <a href="{% url 'details' %}">Login</a>
 
   <!-- Signup Link -->
-  <a href="{% url 'signup' %}" 
-     style="
-        display: inline-block;
-        width: 90%;
-        margin-top: 15px;
-        background: linear-gradient(90deg, #28a745, #1e7e34);
-        color: white;
-        text-decoration: none;
-        padding: 10px 0;
-        border-radius: 8px;
-        font-size: 16px;
-        font-weight: bold;
-        letter-spacing: 1px;
-        box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
-     ">
-     Signup
-  </a>
-
+  <a href="{% url 'signup' %}">Signup</a>
 </form>
