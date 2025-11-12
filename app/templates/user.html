@@ -1,23 +1,2 @@
-<form method="post" action="{% url 'user' %}">
-  {% csrf_token %}
-
-  <h2>Login</h2>
-
-  <!-- Username -->
-  <input type="text" name="username" placeholder="NAME" value="{{ request.POST.username }}" required>
-
-  <!-- Department -->
-  <input type="text" name="department" placeholder="DEPT" value="{{ request.POST.department }}" required>
-
-  <!-- Year -->
-  <input type="text" name="year" placeholder="YEAR" value="{{ request.POST.year }}" required>
-
-  <!-- Password -->
-  <input type="password" name="password" placeholder="Password" required>
-
-  <!-- Login Link Styled as Button -->
-  <a href="{% url 'details' %}">Login</a>
-
-  <!-- Signup Link -->
-  <a href="{% url 'signup' %}">Signup</a>
-</form>
+<a href="{% url 'login' %}" >STAFF</a>
+<a href="{% url 'head' %}" > HEAD</a>
