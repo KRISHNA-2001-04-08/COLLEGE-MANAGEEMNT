@@ -98,3 +98,11 @@ def head(request):
 
 def details(request):
     return render(request,"details.html")
+def admin_details(request):
+    return render(request,"admin_details.html")
+def ECE(request):
+    return render(request,"ECE.html")
+def EEE(request):
+    return render(request,"EEE.html")
+def CSE(request):
+    return render(request,"CSE.html")
