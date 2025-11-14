@@ -106,3 +106,27 @@ def EEE(request):
     return render(request,"EEE.html")
 def CSE(request):
     return render(request,"CSE.html")
+def CSE_1(request):
+    return render(request,"CSE_1.html")
+def CSE_2(request):
+    return render(request,"CSE_2.html")
+def CSE_3(request):
+    return render(request,"CSE_3.html")
+def CSE_4(request):
+    return render(request,"CSE_4.html")
+def ECE_1(request):
+    return render(request,"ECE_1.html")
+def ECE_2(request):
+    return render(request,"ECE_2.html")
+def ECE_3(request):
+    return render(request,"ECE_3.html")
+def ECE_4(request):
+    return render(request,"ECE_4.html")
+def EEE_1(request):
+    return render(request,"EEE_1.html")
+def EEE_2(request):
+    return render(request,"EEE_2.html")
+def EEE_3(request):
+    return render(request,"EEE_3.html")
+def EEE_4(request):
+    return render(request,"EEE_4.html")
