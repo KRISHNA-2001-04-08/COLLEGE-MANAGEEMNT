@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 from django.contrib.auth.decorators import user_passes_test
-from .models import Staff
+from .models import Staff,Student
 
 
 
@@ -130,3 +130,23 @@ def EEE_3(request):
     return render(request,"EEE_3.html")
 def EEE_4(request):
     return render(request,"EEE_4.html")
+def add(request):
+    if request.method == "POST":
+        Student.objects.create(
+            Name=request.POST['name'],
+            Rollnumber=request.POST['rollno'],
+            DOB=request.POST['DOB'],
+            Father=request.POST['father'],
+            Mother=request.POST['mother'],
+            Occupation=request.POST['occupation'],
+            Phoneno=request.POST['phoneno'],
+            Bloodgroup=request.POST['bloodgroup'],
+            DoorNo=request.POST['doorno'],
+            Street=request.POST['street'],
+            Place=request.POST['place'],
+            District=request.POST['district'],
+            Pincode=request.POST['pincode']
+        )
+        return redirect('ECE')
+
+    return render(request, 'add.html')

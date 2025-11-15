@@ -1,0 +1,63 @@
+<h1>Add Student</h1>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <label>Name:</label>
+    <input type="text" name="name" required>
+    <br><br>
+
+    <label>Roll No:</label>
+    <input type="text" name="rollno" required>
+    <br><br>
+
+    <label>Date of Birth:</label>
+    <input type="date" name="DOB" required>
+    <br><br>
+
+    <label>Father's Name:</label>
+    <input type="text" name="father">
+    <br><br>
+
+    <label>Mother's Name:</label>
+    <input type="text" name="mother">
+    <br><br>
+
+    <label>Occupation:</label>
+    <input type="text" name="occupation">
+    <br><br>
+
+    <label>Phone No:</label>
+    <input type="text" name="phoneno">
+    <br><br>
+
+    <label>Blood Group:</label>
+    <input type="text" name="bloodgroup">
+    <br><br>
+
+    <label>Door No:</label>
+    <input type="text" name="doorno">
+    <br><br>
+
+    <label>Street:</label>
+    <input type="text" name="street">
+    <br><br>
+
+    <label>Place:</label>
+    <input type="text" name="place">
+    <br><br>
+
+    <label>District:</label>
+    <input type="text" name="district">
+    <br><br>
+
+    <label>Pincode:</label>
+    <input type="text" name="pincode">
+    <br><br>
+
+    <button type="submit">Add Student</button>
+</form>
+
+<br>
+
+<a href="{% url 'admin_details' %}">Back</a>

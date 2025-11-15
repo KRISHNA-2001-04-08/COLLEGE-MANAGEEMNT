@@ -25,5 +25,6 @@ urlpatterns = [
     path("EEE_1/",views.EEE_1,name="EEE_1"),
     path("EEE_2/",views.EEE_2,name="EEE_2"),
     path("EEE_3/",views.EEE_3,name="EEE_3"),
-    path("EEE_4/",views.EEE_4,name="EEE_4")
+    path("EEE_4/",views.EEE_4,name="EEE_4"),
+    path("add",views.add,name="add")
 ]

@@ -1,0 +1,46 @@
+<h1>Student List</h1>
+
+<form method="get">
+    <input type="text" name="q" placeholder="Search students..." value="{{ request.GET.q }}">
+    <button type="submit">Search</button>
+</form>
+
+
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Roll Number</th>
+        <th>Date of Birth</th>
+        <th>Father</th>
+        <th>Mother</th>
+        <th>Occupation</th>
+        <th>Phone No</th>
+        <th>Blood Group</th>
+        <th>Door No</th>
+        <th>Street</th>
+        <th>Place</th>
+        <th>District</th>
+        <th>Pincode</th>
+        <th>Actions</th>
+    </tr>
+
+    {% for s in student %}
+    <tr>
+        <td>{{ s.Name }}</td>
+        <td>{{ s.Rollnumber }}</td>
+        <td>{{ s.DOB }}</td>
+        <td>{{ s.Father }}</td>
+        <td>{{ s.Mother }}</td>
+        <td>{{ s.Occupation }}</td>
+        <td>{{ s.Phoneno }}</td>
+        <td>{{ s.Bloodgroup }}</td>
+        <td>{{ s.DoorNo }}</td>
+        <td>{{ s.Street }}</td>
+        <td>{{ s.Place }}</td>
+        <td>{{ s.District }}</td>
+        <td>{{ s.Pincode }}</td>
+       
+    </tr>
+    {% endfor %}
+</table>
